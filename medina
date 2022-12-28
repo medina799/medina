@@ -1,0 +1,142 @@
+import math
+import os
+import random
+import re
+import sys
+def solve(a, b, c):
+    hcf=math.gcd(a,b)
+    if c<=max(a,b) and c%hcf==0:
+          return "YES"
+    return "NO" 
+    
+
+
+    t = int(input().strip())
+
+    for t_itr in range(t):
+        first_multiple_input = input().rstrip().split()
+
+        a = int(first_multiple_input[0])
+
+        b = int(first_multiple_input[1])
+
+        c = int(first_multiple_input[2])
+
+        result = solve(a, b, c)
+
+        fptr.write(result + '\n')
+
+    fptr.close()
+
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'solve' function below.
+#
+# The function is expected to return an INTEGER.
+# The function accepts INTEGER n as parameter.
+#
+
+def solve(n):
+    if(n%2==1):
+        return 2
+    elif((n//2)%2==1):
+        return 4
+    else:
+        return 3
+
+
+    t = int(input().strip())
+
+    for t_itr in range(t):
+        n = int(input().strip())
+
+        result = solve(n)
+
+        fptr.write(str(result) + '\n')
+
+    fptr.close()
+
+
+
+
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'lights' function below.
+#
+# The function is expected to return a LONG_INTEGER.
+# The function accepts INTEGER n as parameter.
+#
+
+def lights(n):
+    # Write your code here
+    return pow(2, n, 100000) - 1 # 10**5
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    t = int(input().strip())
+
+    for t_itr in range(t):
+        n = int(input().strip())
+
+        result = lights(n)
+
+        fptr.write(str(result) + '\n')
+
+    fptr.close()
+
+
+
+
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'solve' function below.
+#
+# The function is expected to return a STRING.
+# The function accepts INTEGER n as parameter.
+#
+
+def solve(n):
+    i = 1
+    while (True):
+        X = int(bin(i)[2:].replace('1', '9'))
+        if X % n == 0:
+            return str(X)
+        i += 1
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    t = int(input().strip())
+
+    for t_itr in range(t):
+        n = int(input().strip())
+
+        result = solve(n)
+
+        fptr.write(result + '\n')
+
+    fptr.close()
